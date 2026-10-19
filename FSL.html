@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unip Aluno EAD</title>
+  <style>
+    /* Todas as medidas acompanham a referência de 1920 px. */
+    :root {
+      --azul-faixa: #1800ad;
+      --azul-texto: #211982;
+      --azul-linha: #211982;
+      --rodape: #9692c4;
+      --margem: 5.625%;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding-top: clamp(24px, 3.125vw, 60px);
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--azul-texto);
+    }
+    .faixa {
+      background: var(--azul-faixa);
+      color: white;
+      padding: clamp(12px, .9375vw, 18px) var(--margem);
+    }
+    .marca {
+      margin: 0;
+      font-size: clamp(30px, 3.3333vw, 64px);
+      line-height: 1.05;
+      font-weight: 400;
+    }
+    /* Para usar um logotipo, substitua IMAGEM por uma tag img. */
+    .marca img { display: block; max-width: 100%; height: 67px; object-fit: contain; }
+    main { margin-inline: var(--margem); }
+    h1 {
+      margin: 0;
+      padding-top: clamp(30px, 2.7083vw, 52px);
+      padding-bottom: clamp(20px, 1.25vw, 24px);
+      font-size: clamp(36px, 3.3333vw, 64px);
+      line-height: 1.1;
+      font-weight: 400;
+      text-align: center;
+      color: #000;
+      border-bottom: 4px solid var(--azul-linha);
+    }
+    .dados {
+      display: grid;
+      grid-template-columns: 22.4% minmax(0, 1fr);
+      align-items: center;
+      row-gap: clamp(12px, .9375vw, 18px);
+      margin: 0;
+      padding: clamp(24px, 1.7708vw, 34px) 0;
+      font-size: clamp(20px, 2.0833vw, 40px);
+      line-height: 1.09;
+    }
+    dt { font-weight: 700; }
+    dd { margin: 0; overflow-wrap: anywhere; }
+    footer {
+      border-top: 4px solid var(--azul-linha);
+      padding-top: 16px;
+      padding-bottom: 40px;
+      color: var(--rodape);
+      font-size: clamp(18px, 1.4583vw, 28px);
+      line-height: 1.2;
+    }
+    footer p { margin: 0; }
+    @media (max-width: 600px) {
+      .dados { grid-template-columns: 30% minmax(0, 1fr); column-gap: 12px; }
+      h1, footer { border-width: 2px; }
+    }
+    @media print {
+      body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .dados { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="faixa">
+  </header>
+  <main>
+    <h1>Dados do Aluno</h1>
+    <dl class="dados">
+      <dt>Mátricula:</dt><dd>R069990</dd>
+      <dt>Nome:</dt><dd>JULIA OLIVEIRA DOS SANTOS</dd>
+      <dt>RG:</dt><dd>55826376 8</dd>
+      <dt>Nascimento:</dt><dd>22/09/2005</dd>
+      <dt>Curso:</dt><dd>18501 - SUP TEC EM<br>ANALISE/DESENV SISTEMAS</dd>
+      <dt>Unidade:</dt><dd>0118 - RIB PRETO-VARGAS</dd>
+      <dt>Carteirinha:</dt><dd>ATIVO</dd>
+      <dt>Validade:</dt><dd>JAN/2027</dd>
+    </dl>
+    <footer><p>Data: 19/10/2026</p></footer>
+  </main>
+</body>
+</html>
